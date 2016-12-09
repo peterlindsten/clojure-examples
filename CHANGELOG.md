@@ -2,13 +2,13 @@
 
 ## 0.1.1 - 2016-12-05
 ### Changed
-- Documentation on how to make the widgets.
+- Placeholder text
 
 ### Removed
-- `make-widget-sync` - we're all async, all the time.
+- `placerholder code` - Placeholder
 
 ### Fixed
-- Fixed widget maker to keep working when daylight savings switches over.
+- Placeholder
 
 ## 0.1.0 - 2016-12-05
 ### Added
