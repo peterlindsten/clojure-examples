@@ -7,6 +7,12 @@
 (def printer (fn [params] (print params)))
 (defn printer [params] (print params))
 
+; "private" functions
+(defn ^:private my-private []
+  (println "I'm private!"))
+(defn- my-private []
+  (println "I'm private")) ; Shorthand of above
+
 ; Arity overloading
 (defn printer
   ([] (printer "What?!")) ; Calling another arity of ourselves
