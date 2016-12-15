@@ -23,12 +23,23 @@
   ([] (printer "What?!"))
   ([& params] (apply println params)))
 
+; Named arguments
+; Note: this is just destructuring the & rest argument collection
+(defn address-printer [name & {:keys [street zip city]}] ; the & is required for this to work like named arguments, otherwise it just destructures a map in the position
+  (println name)
+  (when street (println street)) ; (when) fails if parameter is nil
+  (when zip (println zip))
+  (when city (println city)))
+
 ;; Invocation
 ; As the first item in a list
 ((fn [params] (print params)) "Herro!")
 (printer "Herro again!")
 (printer)
 (printer "Herro" "Variadic" "Function")
+
+; With named arguments
+(address-printer "Oskar Götesson" :city "Götet")
 
 ; Apply a sequence as a list of arguments
 (apply println [1 3 2])
